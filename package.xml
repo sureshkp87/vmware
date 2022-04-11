@@ -42,7 +42,7 @@
     </types>
     <types>
         <members>*</members>
-        <name>lwc</name>
+        <name>LightningComponentBundle</name>
     </types>
     <version>54.0</version>
 </Package>

@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Number of Books Per Author" icon-name="custom:custom63">
+        <div class="slds-var-m-around_medium">
+            <template if:true={length}>
+                <template for:each={visibleBooksByAuthor} for:item="books">
+                    <p key={books.authorName}>
+                        {books.authorName}
+                        {books.bookCount}
+                    </p>
+                </template>
+            </template>
+            <template if:false= {length}>
+                No Books Yet !!!
+            </template>
+            <div slot="footer" class="slds-var-m-vertical_medium">
+                <c-paginator records={totalBooksByAuthor} record-size="5" onupdate={updateAuthorsHandler}>
+                </c-paginator>
+            </div>
+        </div>
+    </lightning-card>
+</template>

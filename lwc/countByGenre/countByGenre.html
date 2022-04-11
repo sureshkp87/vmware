@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Number Of Books By Genre" icon-name="custom:custom63">
+        <div class="slds-var-m-around_medium">
+            <template if:true={length}>
+                <template for:each={visibleBooksByGenre} for:item="books">
+                    <p key={books.Genre}>
+                        {books.Genre}
+                        {books.bookCount}
+                    </p>
+                </template>
+            </template>
+            <template if:false= {length}>
+                No Books Yet !!!
+            </template>
+            <div slot="footer" class="slds-var-m-vertical_medium">
+                <c-paginator records={totalBooksByGenre} record-size="5" onupdate={updateGenresHandler}>
+                </c-paginator>
+            </div>
+        </div>
+    </lightning-card>
+</template>

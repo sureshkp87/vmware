@@ -75,6 +75,12 @@
                 <elementReference>Title</elementReference>
             </value>
         </inputAssignments>
+        <inputAssignments>
+            <field>Version__c</field>
+            <value>
+                <elementReference>Version</elementReference>
+            </value>
+        </inputAssignments>
         <object>Book__c</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
@@ -113,6 +119,17 @@
             <fieldText>Language</fieldText>
             <fieldType>DropdownBox</fieldType>
             <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Version</name>
+            <dataType>Number</dataType>
+            <defaultValue>
+                <numberValue>1.0</numberValue>
+            </defaultValue>
+            <fieldText>Version</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+            <scale>0</scale>
         </fields>
         <helpText>&lt;p&gt;This component will create a new Book against the Publishing House&lt;/p&gt;</helpText>
         <nextOrFinishButtonLabel>Save</nextOrFinishButtonLabel>
